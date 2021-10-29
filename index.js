@@ -95,19 +95,19 @@ const calcG4Value = (data) => {
 const calcH4Value = (data) => {
   const ans = [];
   ans.push({
-    formula: 'h(0) = g(0) + w0 * g(2)',
+    formula: 'X(0) = g(0) + w0 * g(2)',
     value: add(data[0], data[2], w0),
   });
   ans.push({
-    formula: 'h(1) = g(1) + w1 * g(3)',
+    formula: 'X(1) = g(1) + w1 * g(3)',
     value: add(data[1], data[3], w2),
   });
   ans.push({
-    formula: 'h(2) = g(0) - w0 * g(2)',
+    formula: 'X(2) = g(0) - w0 * g(2)',
     value: sub(data[0], data[2], w0),
   });
   ans.push({
-    formula: 'h(3) = g(1) - w1 * g(3)',
+    formula: 'X(3) = g(1) - w1 * g(3)',
     value: sub(data[1], data[3], w2),
   });
   return ans;
