@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      FFT - Fast Fourier Transform
+    </title>
+    <link rel="icon" href="icon.png" type="image/png" sizes="16x16">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.5.1/math.js" integrity="sha512-AfRcJIj922x/jSJpQLnry0DYIBg6EGCtwk/MiQ6QvDlzb7kNFxH8EdqXLkaXXY3YHQS9FrSb8H7LzuLn0CZQ1A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
+  </head>
+  <body>
+    <section class="section">
+      <h1 class="title">Fast Fourier Transform</h1>
+      <textarea class="textarea" id="values" placeholder="Space Separated Points..."></textarea>
+      <br/>
+      <div class="lower__form">
+      <div class="control">
+        <label class="radio">
+          <input type="radio" name="points" class="points" value="4point">
+          4 Points
+        </label>
+        <label class="radio">
+          <input type="radio" name="points" class="points" value="8point" checked>
+          8 Points
+        </label>
+      </div>
+      <br/>
+      <div>
+      <button class="button is-info is-outlined" id="fftBtn">Compute</button>
+    </div>
+    </div>
+    </section>
+    <section class="section" id="output" style="display: none;">
+      <p>w<sup>0</sup><sub>8</sub> = 1, w<sup>1</sup><sub>8</sub> = 1/√2 - 1/√2j, w<sup>2</sup><sub>8</sub> = -j, w<sup>3</sup><sub>8</sub> = -1/√2 - 1/√2j</p>
+      <br/>
+      <table id="gvalues" class="table">
+
+      </table>
+      <table id="hvalues" class="table">
+        
+      </table>
+      <table id="fvalues" class="table">
+
+      </table>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
