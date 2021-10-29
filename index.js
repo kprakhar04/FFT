@@ -100,7 +100,7 @@ const calcH4Value = (data) => {
   });
   ans.push({
     formula: 'h(1) = g(1) + w1 * g(3)',
-    value: add(data[1], data[3], w1),
+    value: add(data[1], data[3], w2),
   });
   ans.push({
     formula: 'h(2) = g(0) - w0 * g(2)',
@@ -108,7 +108,7 @@ const calcH4Value = (data) => {
   });
   ans.push({
     formula: 'h(3) = g(1) - w1 * g(3)',
-    value: sub(data[1], data[3], w1),
+    value: sub(data[1], data[3], w2),
   });
   return ans;
 };
