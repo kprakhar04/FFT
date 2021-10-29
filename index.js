@@ -38,6 +38,9 @@ const getData = (vals, param) => {
   return data;
 };
 const fft = () => {
+  gtbl.innerHTML = '';
+  htbl.innerHTML = '';
+  ftbl.innerHTML = '';
   article.style.display = 'block';
   const data = values.value.trim().split(' ');
   if (prob === POINT8 && data.length === 8) {
@@ -202,7 +205,6 @@ const calcFValue = (data) => {
 };
 
 const createTbl = (data, tbl) => {
-  tbl.innerHTML = '';
   const thead = document.createElement('thead');
   let row = document.createElement('tr');
   for (let i = 0; i < colHeaders.length; i++) {

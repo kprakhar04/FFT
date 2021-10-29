@@ -17,3 +17,7 @@ body {
     #e6dee9 100%
   );
 }
+.tbl__output {
+  display: flex;
+  justify-content: space-between;
+}
